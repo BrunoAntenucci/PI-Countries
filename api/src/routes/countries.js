@@ -4,14 +4,14 @@ const router = Router();
 
 const countriesController = require('../controllers/countries')
 
-router.get('/', countriesController.getAllElements);
+router.get('/', countriesController.getAll);
 
-router.get('/:id', countriesController.getElementById);
+router.get('/:id', countriesController.getById);
 
-router.post('/', countriesController.postElement);
+router.post('/', countriesController.post);
 
-router.put('/:id', countriesController.modifyElement);
+router.put('/:id', countriesController.modify);
 
-router.delete('/:id', countriesController.deleteElement);
+router.delete('/:id', countriesController.delete);
 
 module.exports = router;

@@ -2,16 +2,16 @@ const { Router } = require('express');
 
 const router = Router();
 
-const activitiesController = require('../controllers/activities')
+const activitiesController = require('../controllers/activities.js')
 
-router.get('/', activitiesController.getAllElements);
+router.get('/', activitiesController.getAll);
 
-router.get('/:id', activitiesController.getElementById);
+router.get('/:id', activitiesController.getById);
 
-router.post('/', activitiesController.postElement);
+router.post('/', activitiesController.post);
 
-router.put('/:id', activitiesController.modifyElement);
+router.put('/:id', activitiesController.modify);
 
-router.delete('/:id', activitiesController.deleteElement);
+router.delete('/:id', activitiesController.delete);
 
 module.exports = router;
