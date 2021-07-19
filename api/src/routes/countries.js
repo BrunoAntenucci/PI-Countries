@@ -2,16 +2,16 @@ const { Router } = require('express');
 
 const router = Router();
 
-const { getAllCountries, getCountryById, postCountry, modifyCountry, deleteCountry } = require('../controllers/countries')
+const countriesController = require('../controllers/countries')
 
-router.get('/', getAllCountries);
+router.get('/', countriesController.getAllElements);
 
-router.get('/:id', getCountryById);
+router.get('/:id', countriesController.getElementById);
 
-router.post('/', postCountry);
+router.post('/', countriesController.postElement);
 
-router.put('/:id', modifyCountry);
+router.put('/:id', countriesController.modifyElement);
 
-router.delete('/:id', deleteCountry);
+router.delete('/:id', countriesController.deleteElement);
 
 module.exports = router;
