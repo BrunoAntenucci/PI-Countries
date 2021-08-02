@@ -4,7 +4,7 @@ const router = Router();
 
 const countriesController = require('../controllers/countries')
 
-router.get('/', countriesController.getAll);
+router.get('/', countriesController.getFromApi);
 
 router.get('/:id', countriesController.getById);
 

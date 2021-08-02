@@ -1,9 +1,10 @@
 import './App.css';
+import CountryCard from './Components/CountryCard/CountryCard.js';
 
 function App() {
   return (
     <div className="App">
-      <h1>Henry Countries</h1>
+      <CountryCard/>
     </div>
   );
 }

@@ -4,9 +4,8 @@ module.exports = (sequelize) => {
   // defino el modelo
   return sequelize.define('activity', {
     id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
         allowNull: false,
-        autoincrement: true,
         primaryKey: true,
     },  
     name: {
